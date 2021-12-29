@@ -144,6 +144,7 @@ const IndexPage = () => {
         <span role="img" aria-label="Sunglasses smiley emoji">
           😎
         </span>
+        {"      Wow it works."}
       </p>
       <ul style={listStyles}>
         <li style={docLinkStyle}>
