@@ -1,4 +1,5 @@
 import * as React from 'react';
+import PropTypes from 'prop-types';
 import { Link } from 'gatsby';
 import {
   container,
@@ -8,7 +9,6 @@ import {
   navLinkItem,
 } from './layout.module.css';
 
-// eslint-disable-next-line react/prop-types
 function Layout({ pageTitle, children }) {
   return (
     <div className={container}>
@@ -35,5 +35,11 @@ function Layout({ pageTitle, children }) {
     </div>
   );
 }
+
+Layout.propTypes = {
+  pageTitle: PropTypes.string.isRequired,
+  children: PropTypes.node,
+};
+Layout.defaultProps = { children: '' };
 
 export default Layout;

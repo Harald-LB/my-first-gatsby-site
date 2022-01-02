@@ -1,5 +1,6 @@
 // Step 1: Import React
 import * as React from 'react';
+import { StaticImage } from 'gatsby-plugin-image';
 import Layout from '../components/layout';
 
 // Step 2: Define your component
@@ -8,7 +9,10 @@ function AboutPage() {
     <main>
       <Layout pageTitle="About Me">
         <p>Hi there! I&apos;m the proud creator of this site, which I built with Gatsby.</p>
-        <p>We are at step 2.2</p>
+        <StaticImage
+          alt="pebble stones"
+          src="../images/Render.png"
+        />
       </Layout>
     </main>
   );
