@@ -1,6 +1,6 @@
 import * as React from 'react';
 import PropTypes from 'prop-types';
-import { Link } from 'gatsby';
+import { Link, useStaticQuery, graphql } from 'gatsby';
 import {
   container,
   heading,
@@ -10,9 +10,25 @@ import {
 } from './layout.module.css';
 
 function Layout({ pageTitle, children }) {
+  const data = useStaticQuery(graphql`
+      query  {
+          site {
+              siteMetadata {
+                  title
+              }
+          }
+      }
+  `);
   return (
     <div className={container}>
-      <title>{pageTitle}</title>
+      <title>
+        {pageTitle}
+        {' '}
+        |
+        {' '}
+        {data.site.siteMetadata.title}
+        <header>{data.site.siteMetadata.title}</header>
+      </title>
       <nav>
         <ul className={navLinks}>
           <li className={navLinkItem}>
