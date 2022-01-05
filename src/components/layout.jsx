@@ -7,6 +7,7 @@ import {
   navLinks,
   navLinkText,
   navLinkItem,
+  siteTitle,
 } from './layout.module.css';
 
 function Layout({ pageTitle, children }) {
@@ -27,8 +28,8 @@ function Layout({ pageTitle, children }) {
         |
         {' '}
         {data.site.siteMetadata.title}
-        <header>{data.site.siteMetadata.title}</header>
       </title>
+      <header className={siteTitle}>{data.site.siteMetadata.title}</header>
       <nav>
         <ul className={navLinks}>
           <li className={navLinkItem}>
@@ -36,7 +37,12 @@ function Layout({ pageTitle, children }) {
               Home
             </Link>
           </li>
-          <li>
+          <li className={navLinkItem}>
+            <Link to="/blog" className={navLinkText}>
+              Blog
+            </Link>
+          </li>
+          <li className={navLinkItem}>
             <Link to="/about" className={navLinkText}>
               About
             </Link>
@@ -47,7 +53,6 @@ function Layout({ pageTitle, children }) {
         <h1 className={heading}>{pageTitle}</h1>
         {children}
       </main>
-
     </div>
   );
 }
