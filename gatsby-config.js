@@ -7,11 +7,24 @@ module.exports = {
   plugins: [
     'gatsby-plugin-image',
     'gatsby-plugin-sharp',
+    'gatsby-plugin-lint-queries',
     {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'blog',
         path: `${__dirname}/blog`,
+      },
+    },
+    'gatsby-plugin-mdx',
+    {
+      resolve: 'gatsby-transformer-remark',
+      options: {
+        plugins: [
+          {
+            resolve: 'gatsby-remark-prismjs',
+            options: {},
+          },
+        ],
       },
     },
   ],
