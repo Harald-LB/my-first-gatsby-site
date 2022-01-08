@@ -2,12 +2,11 @@ module.exports = {
   siteMetadata: {
     siteUrl: 'https://myfirstgatsbysitemain05045.gatsbyjs.io/',
     title: 'My First Gatsby Site',
-    progressState: '4. Query for Data with GraphQL',
+    progressState: '5. Transform Data to Use MDX',
   },
   plugins: [
     'gatsby-plugin-image',
     'gatsby-plugin-sharp',
-    'gatsby-plugin-lint-queries',
     {
       resolve: 'gatsby-source-filesystem',
       options: {
