@@ -2,11 +2,12 @@ module.exports = {
   siteMetadata: {
     siteUrl: 'https://myfirstgatsbysitemain05045.gatsbyjs.io/',
     title: 'My First Gatsby Site',
-    progressState: '5. Transform Data to Use MDX',
+    progressState: 'Part 7: Add Dynamic Images from Data',
   },
   plugins: [
     'gatsby-plugin-image',
     'gatsby-plugin-sharp',
+    'gatsby-transformer-sharp',
     {
       resolve: 'gatsby-source-filesystem',
       options: {
